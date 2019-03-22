@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let p of posts">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              {{p.payload.doc.data().Title}}
+            </ion-card-title>
+            <ion-card-content>
+              <p>Status : {{p.payload.doc.data().Status}}</p>
+              <ion-button (click)="preview(p.payload.doc.id)">View</ion-button>
+            </ion-card-content>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
